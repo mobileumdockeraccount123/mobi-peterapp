@@ -1,7 +1,11 @@
 version: '3.8'
+networks: # to create a custom bridge
+  peterbr1: 
 services:
   peterapp7:
     image: peterapp:testv1
     container_name: peteric1
     ports:
     - "1683:80"
+    networks: # use bridge created above 
+    - peterbr1

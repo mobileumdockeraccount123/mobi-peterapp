@@ -1,0 +1,12 @@
+version: '3.8'
+networks:
+  peterbr123
+services:
+  peterapp7:
+    image: peterapp:v1
+    container_name: peteric1
+    ports:
+    - "1983:80"
+    restart: always
+    networks:
+    - peterbr123
